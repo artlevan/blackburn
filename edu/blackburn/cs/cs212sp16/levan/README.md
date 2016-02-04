@@ -1,1 +1,0 @@
-This file doesn't do anything except help Dr. Gross set up GitHub.
