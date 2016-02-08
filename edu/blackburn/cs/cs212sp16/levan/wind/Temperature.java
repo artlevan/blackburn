@@ -9,6 +9,12 @@ package edu.blackburn.cs.cs212sp16.levan.wind;
  *
  * @author arthur
  */
-public class Clouds {
+public class Temperature extends Measurement {
+
+    public Temperature(double amount, String unit) {
+        super(amount, unit);
+    }
+
+
     
 }
