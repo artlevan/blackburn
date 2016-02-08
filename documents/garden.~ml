@@ -40,7 +40,7 @@
 <XPD:ATTR name="Left" type="integer">248</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">80</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">101</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">95</XPD:ATTR>
 <XPD:REF name="Model">bHtAOMto2kyjassn7hHeaQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="BW4k2duGC02nf0xiX+tVaQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="reLzAA5ILkaic9S5TjPC3wAA">
@@ -132,8 +132,8 @@
 <XPD:ATTR name="FillColor" type="string">$00B9FFFF</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">552</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">168</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">80</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">69</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">113</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">95</XPD:ATTR>
 <XPD:REF name="Model">lzGOmHMl2EWh0+97oMb2ZgAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="9Kf/B39JAEWzx+ckp9aOeQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="Z5dVWZEYlECnwdwhWYrkEgAA">
@@ -164,7 +164,7 @@
 <XPD:ATTR name="Left" type="integer">384</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">244</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">111</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">82</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">95</XPD:ATTR>
 <XPD:REF name="Model">nnvEnrSP8ECMZQzZNrnRCwAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="1WJhCUCdrESRhw9TejlJigAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="i9bJQBqcmkKjd8VbmtrbhwAA">
@@ -200,8 +200,36 @@
 <XPD:REF name="Views[1]">65m5dCrkzUiGa82mKthsXAAA</XPD:REF>
 <XPD:REF name="Views[2]">ifW4JGdkCkuOLe2juXcqEgAA</XPD:REF>
 <XPD:REF name="Views[3]">zpNL04qP4UmILnw1BWlsngAA</XPD:REF>
-<XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="Operations[0]" type="UMLOperation" guid="vrblhnEQMkC4toPhy7mU2AAA">
+<XPD:ATTR name="Name" type="string">plantSeed</XPD:ATTR>
+<XPD:REF name="Owner">bHtAOMto2kyjassn7hHeaQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="o4ObpslbMEa0OHiit0rcygAA">
+<XPD:ATTR name="Name" type="string">Seed</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">vrblhnEQMkC4toPhy7mU2AAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="OEdv0644U0CT1L3AFN9E4AAA">
+<XPD:ATTR name="Name" type="string">pickFruit</XPD:ATTR>
+<XPD:REF name="Owner">bHtAOMto2kyjassn7hHeaQAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="MtJSFOIOQ0+NZtrOLVEwQAAA">
+<XPD:ATTR name="Name" type="string">Fruit</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">OEdv0644U0CT1L3AFN9E4AAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="1I0Kp9BAvUq8tXb2Ntl6ZgAA">
+<XPD:ATTR name="Name" type="string">Plant</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="Owner">bHtAOMto2kyjassn7hHeaQAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="MphY8guQGk2JLCJ53YjZFwAA">
+<XPD:ATTR name="Name" type="string">Pick</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
 <XPD:REF name="Owner">bHtAOMto2kyjassn7hHeaQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -267,8 +295,9 @@
 <XPD:REF name="BehavioralFeature">O5PCiE7IFU60EwzVsrQUCQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#TypedFeatures" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#TypedFeatures" type="integer">2</XPD:ATTR>
 <XPD:REF name="TypedFeatures[0]">dpweVTvonEu3zqtBhVxHjgAA</XPD:REF>
+<XPD:REF name="TypedFeatures[1]">s8eXUsRmuUOH2Se4vhps6gAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="DS5iTjTlxEC7p7TSrbj+ngAA">
 <XPD:ATTR name="Name" type="string">Type</XPD:ATTR>
@@ -339,7 +368,7 @@
 <XPD:REF name="Views[1]">9HMtMf/V50K1fTAQZ9Ih/wAA</XPD:REF>
 <XPD:REF name="Views[2]">FWEWmEoez0qgWAG6Fp3bswAA</XPD:REF>
 <XPD:REF name="Views[3]">2Li9WaVbc0iYDm4+XQKjaAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="JGKsl2GQd0evaIyECwWMJQAA">
 <XPD:ATTR name="Name" type="string">Garden</XPD:ATTR>
 <XPD:REF name="Owner">lzGOmHMl2EWh0+97oMb2ZgAA</XPD:REF>
@@ -349,11 +378,28 @@
 <XPD:REF name="BehavioralFeature">JGKsl2GQd0evaIyECwWMJQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#Attributes" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="xAd4dlduJUuECkbfIMRzSAAA">
+<XPD:ATTR name="Name" type="string">seeGarden</XPD:ATTR>
+<XPD:REF name="Owner">lzGOmHMl2EWh0+97oMb2ZgAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="ABNgMBrpOESdNF2C01WlVQAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">xAd4dlduJUuECkbfIMRzSAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="L9Q5uWFQeUaLVNEh7HK8fwAA">
 <XPD:ATTR name="Name" type="string">Space</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
 <XPD:ATTR name="TypeExpression" type="string">int</XPD:ATTR>
+<XPD:REF name="Owner">lzGOmHMl2EWh0+97oMb2ZgAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="s8eXUsRmuUOH2Se4vhps6gAA">
+<XPD:ATTR name="Name" type="string">Plants</XPD:ATTR>
+<XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">Seed</XPD:ATTR>
+<XPD:REF name="Type_">AFusjRMKE0CmWF0H1Rn52wAA</XPD:REF>
 <XPD:REF name="Owner">lzGOmHMl2EWh0+97oMb2ZgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -365,7 +411,7 @@
 <XPD:REF name="Views[1]">zh7Vo3wqx0maSu7ysBsfZwAA</XPD:REF>
 <XPD:REF name="Views[2]">e06tlHi5vUyOd5ULQ/DUKQAA</XPD:REF>
 <XPD:REF name="Views[3]">njLlzc7YNEyWBJnLmEzaFAAA</XPD:REF>
-<XPD:ATTR name="#Operations" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="#Operations" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Operations[0]" type="UMLOperation" guid="5wOlR4aP+UaqXo4ZfjvCGQAA">
 <XPD:ATTR name="Name" type="string">Basket</XPD:ATTR>
 <XPD:REF name="Owner">nnvEnrSP8ECMZQzZNrnRCwAA</XPD:REF>
@@ -377,6 +423,16 @@
 <XPD:OBJ name="Parameters[1]" type="UMLParameter" guid="M/1x7TmSu0SVIdF3BzeQ4gAA">
 <XPD:ATTR name="Name" type="string">Fruit</XPD:ATTR>
 <XPD:REF name="BehavioralFeature">5wOlR4aP+UaqXo4ZfjvCGQAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+<XPD:OBJ name="Operations[1]" type="UMLOperation" guid="UHkaQX7U2EuUhgHdJySYlAAA">
+<XPD:ATTR name="Name" type="string">seeBasket</XPD:ATTR>
+<XPD:REF name="Owner">nnvEnrSP8ECMZQzZNrnRCwAA</XPD:REF>
+<XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="Je69V8uvlUmZxLBl/MW7xgAA">
+<XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">String</XPD:ATTR>
+<XPD:REF name="BehavioralFeature">UHkaQX7U2EuUhgHdJySYlAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
