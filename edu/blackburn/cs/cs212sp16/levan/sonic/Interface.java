@@ -37,6 +37,7 @@ public class Interface {
                 System.out.println(this.paths[i]);
 
             }
+            System.out.println();
         }
 
     }
