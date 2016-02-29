@@ -31,15 +31,14 @@ public class Interface {
     }
 
     public void listFile() {
+        System.out.println();
         for (int i = 0; i < this.paths.length; i++) {
             if (((this.paths[i].endsWith(".mp3") == true) || (this.paths[i].endsWith(".flac") == true))
                     || ((this.paths[i].endsWith(".wav") == true) || (this.paths[i].endsWith(".ogg") == true))) {
                 System.out.println(this.paths[i]);
-
             }
-            System.out.println();
         }
-
+        System.out.println();
     }
 
     public void setAndPlayMp3(int cell) {
