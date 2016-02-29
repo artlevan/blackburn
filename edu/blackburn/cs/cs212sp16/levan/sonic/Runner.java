@@ -18,7 +18,7 @@ public class Runner {
     Interface i;
 
     
-        System.out.println ("Please input a Directory to read");
+        System.out.print ("Please input a Directory to read: ");
         String toRead  = input.nextLine();
         i = new Interface(toRead);
         i.listFile();
