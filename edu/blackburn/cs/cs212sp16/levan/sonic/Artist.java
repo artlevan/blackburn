@@ -9,13 +9,19 @@ package edu.blackburn.cs.cs212sp16.levan.sonic;
  *
  * @author arthur.levan
  */
-public abstract class Format {
-    private String extension;
-
-    public Format(String extension) {
-        this.extension = extension;
+public class Artist {
+    private String artist;
+    private String[] artistList;
+    public Artist(String artist){
+        this.artist = artist;
+        
     }
 
+    public String getArtist() {
+        return this.artist;
+    }
+    
 
+    
     
 }

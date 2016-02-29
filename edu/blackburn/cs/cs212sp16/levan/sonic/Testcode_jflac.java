@@ -5,8 +5,7 @@
  */
 package edu.blackburn.cs.cs212sp16.levan.sonic;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.sound.sampled.LineUnavailableException;
@@ -16,25 +15,13 @@ import org.kc7bfi.jflac.apps.Player;
  *
  * @author arthur.levan
  */
-public class Flac extends Format {
-    private String file;
-    public Flac(String file) {
-        super(".flac");
-        this.file = file;
-    }
-    //Determines if a file is a Flac
-    public boolean isFlac(String file) {
-        if (file.endsWith(".flac")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    //Plays a Flac file
-    public void playFlac() {
+public class Testcode_jflac {
+
+    public static void main(String[] args) {
         try {
+            String file = "arthur.levan/documents/tank.flac";
             Player p = new Player();
-            p.decode(this.file);
+            p.decode(file);
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Testcode_jflac.class.getName()).log(Level.SEVERE, null, ex);

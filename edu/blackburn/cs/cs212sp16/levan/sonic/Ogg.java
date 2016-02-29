@@ -22,7 +22,7 @@ public class Ogg extends Format {
         this.file = file;
     }
 
-    //Determines if a file is an mp3
+    //Determines if a file is an Ogg
     public boolean isOgg(String file) {
         if (file.endsWith(".ogg")) {
             return true;
@@ -30,7 +30,7 @@ public class Ogg extends Format {
             return false;
         }
     }
-
+    //Plays an Ogg Vorbis file
     public void playOgg() {
         TinySound.init();
         File i;

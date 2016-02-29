@@ -22,7 +22,7 @@ public class Wav extends Format {
         this.file = file;
     }
 
-    //Determines if a file is an mp3
+    //Determines if a file is a Wav
     public boolean isWav(String file) {
         if (file.endsWith(".wav")) {
             return true;
@@ -30,7 +30,7 @@ public class Wav extends Format {
             return false;
         }
     }
-
+    //Plays a Wav file
     public void playWav() {
         TinySound.init();
         File i;

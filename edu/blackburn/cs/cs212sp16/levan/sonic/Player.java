@@ -30,6 +30,7 @@ public class Player {
         this.dir = this.directory + dir;
     }
 
+    //Prints all supported Audio files in a directory to screen
     public void listFile() {
         System.out.println();
         for (int i = 0; i < this.paths.length; i++) {
@@ -41,6 +42,7 @@ public class Player {
         System.out.println();
     }
 
+    //Sets and plays an Mp3
     public void setAndPlayMp3(int cell) {
         System.out.println("Now Playing: " + this.paths[cell]);
         dir = this.directory + "/" + this.paths[cell];
@@ -48,6 +50,7 @@ public class Player {
         mp3.playMp3();
     }
 
+    //Sets and plays a Flac
     public void setAndPlayFlac(int cell) {
         System.out.println("Now Playing: " + this.paths[cell]);
         String dir = this.directory + "/" + this.paths[cell];
@@ -55,6 +58,7 @@ public class Player {
         flac.playFlac();
     }
 
+    //Sets and plays a Wav
     public void setAndPlayWav(int cell) {
         System.out.println("Now Playing: " + this.paths[cell]);
         String dir = this.directory + "/" + this.paths[cell];
@@ -62,13 +66,14 @@ public class Player {
         wav.playWav();
     }
 
+    //Sets and plays an Ogg
     public void setAndPlayOgg(int cell) {
         System.out.println("Now Playing: " + this.paths[cell]);
         String dir = this.directory + "/" + this.paths[cell];
         ogg = new Ogg(dir);
         ogg.playOgg();
     }
-
+    //Plays all supported audio files in a directory
     public void playFile() {
         for (int i = 0; i < this.paths.length; i++) {
             if (this.paths[i].endsWith(".mp3") == true) {
