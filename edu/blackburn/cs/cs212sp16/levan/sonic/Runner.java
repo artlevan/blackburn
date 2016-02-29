@@ -15,13 +15,13 @@ import java.util.Scanner;
 public class Runner {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    Interface i;
+    Player p;
 
     
         System.out.print ("Please input a Directory to read: ");
         String toRead  = input.nextLine();
-        i = new Interface(toRead);
-        i.listFile();
-        i.playFile();
+        p = new Player(toRead);
+        p.listFile();
+        p.playFile();
     }
 }
