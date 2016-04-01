@@ -16,14 +16,14 @@ import javazoom.jl.player.*;
 public class Testcode_jlayer {
     
   public static void main(String[] args) {
-      try {
-          InputStream i;
-          i = new FileInputStream("arthur.levan/documents/Whisper.mp3");
-          Player p = new Player(i);
-          p.play();
-      } catch (FileNotFoundException | JavaLayerException ex) {
-          Logger.getLogger(Testcode_jlayer.class.getName()).log(Level.SEVERE, null, ex);
-      }
+//      try {
+//          InputStream i;
+//          i = new FileInputStream("arthur.levan/documents/Whisper.mp3");
+//          Player p = new Player(i);
+//          p.play();
+//      } catch (FileNotFoundException | JavaLayerException ex) {
+//          Logger.getLogger(Testcode_jlayer.class.getName()).log(Level.SEVERE, null, ex);
+//      }
   }
 
 
