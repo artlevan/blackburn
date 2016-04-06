@@ -26,8 +26,8 @@ public class TriageStack extends AbstractStack {
     public Patient pop() {
       
         if(this.top.getPatient() != null){
+            this.decrement();
             return this.top.getPatient();
-            decrement();
         }
         return null;
     }

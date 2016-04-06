@@ -30,8 +30,8 @@ public class TriageQueue extends AbstractQueue {
     public Patient dequeue() {
 
         if (this.start.getPatient() != null) {
+            this.decrement();
             return this.start.getPatient();
-            decrement();
         }
         
         return null;
