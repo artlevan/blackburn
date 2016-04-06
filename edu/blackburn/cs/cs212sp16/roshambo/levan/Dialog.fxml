@@ -19,7 +19,7 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false">
+                        <Button mnemonicParsing="false" onAction="#handleShera">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
