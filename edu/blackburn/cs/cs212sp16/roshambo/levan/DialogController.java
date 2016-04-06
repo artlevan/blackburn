@@ -7,59 +7,67 @@ package edu.blackburn.cs.cs212sp16.roshambo.levan;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
+import javafx.event.ActionEvent;
+import javafx.fxml.*;
+import javafx.scene.control.*;
+
 
 /**
  * FXML Controller class
  *
- * @author Artmar
+ * @author Arthur
  */
 public class DialogController implements Initializable {
 
+    HumanPlayer player;
+
     @FXML
-    private void handleShera() {
-        HumanPlayer playerOne = new HumanPlayer("She-ra");
+    private void handleShera(ActionEvent event) {
+        player = new HumanPlayer("She-ra");
     }
 
     @FXML
-    private void handleScarlett() {
-        HumanPlayer playerOne = new HumanPlayer("Scarlett");
+    private void handleScarlett(ActionEvent event) {
+        player = new HumanPlayer("Scarlett");
     }
 
     @FXML
-    private void handlePenny() {
-        HumanPlayer playerOne = new HumanPlayer("Penny");
+    private void handlePenny(ActionEvent event) {
+        player = new HumanPlayer("Penny");
     }
 
     @FXML
-    private void handleKim() {
-        HumanPlayer playerOne = new HumanPlayer("Kim");
+    private void handleKim(ActionEvent event) {
+        player = new HumanPlayer("Kim");
     }
 
     @FXML
-    private void handleJem() {
-        HumanPlayer playerOne = new HumanPlayer("Jem");
+    private void handleJem(ActionEvent event) {
+        player = new HumanPlayer("Jem");
     }
 
     @FXML
-    private void handleCheetara() {
-        HumanPlayer playerOne = new HumanPlayer("Cheetara");
+    private void handleCheetara(ActionEvent event) {
+        player = new HumanPlayer("Cheetara");
     }
 
     @FXML
-    private void handleSteelheart() {
-        HumanPlayer playerOne = new HumanPlayer("Steelheart");
+    private void handleSteelheart(ActionEvent event) {
+        player = new HumanPlayer("Steelheart");
     }
 
     @FXML
-    private void handleCoogan() {
-        HumanPlayer playerOne = new HumanPlayer("Kevin Coogan");
+    private void handleCoogan(ActionEvent event) {
+        player = new HumanPlayer("Kevin Coogan");
     }
 
     @FXML
-    private void handleGross() {
-        HumanPlayer playerOne = new HumanPlayer("Joshua Gross");
+    private void handleGross(ActionEvent event) {
+        player = new HumanPlayer("Joshua Gross");
+    }
+    
+    public String getPlayer(){
+        return player.getName();
     }
 
     /**

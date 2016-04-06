@@ -6,7 +6,6 @@
 package edu.blackburn.cs.cs212sp16.roshambo.levan;
 
 import java.net.URL;
-import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
@@ -58,6 +57,10 @@ public class RoshamboController implements Initializable {
         playerOne.setChoice("scissors");
         playerTwo.setChoice();
         compareChoices();
+    }
+    
+    public void getPlayers(){
+//        playerOne = new HumanPlayer(getPlayer());
     }
     
     public void compareChoices() {
