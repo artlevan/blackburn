@@ -25,7 +25,7 @@ public class RoshamboRunner extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         Stage dialogStage = new Stage();
-        VBox vb = FXMLLoader.load(getClass().getResource("Dialog.fxml"));
+        Parent vb = FXMLLoader.load(getClass().getResource("Dialog.fxml"));
         Scene dialogScene = new Scene(vb);
         dialogStage.setScene(dialogScene);
         dialogStage.showAndWait();
