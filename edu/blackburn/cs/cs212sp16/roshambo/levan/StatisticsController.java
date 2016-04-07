@@ -5,47 +5,35 @@
  */
 package edu.blackburn.cs.cs212sp16.roshambo.levan;
 
-import java.io.IOException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.*;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
- * @author Arthur
+ * @author student
  */
-public class DialogController implements Initializable {
-
-    HumanPlayer player;
-    String character;
-    
-    @FXML
+public class StatisticsController implements Initializable {
+        @FXML
     static Parent root;
-    
     @FXML
     private void handleButton(ActionEvent event) {
         Stage stage = (Stage) root.getScene().getWindow();
         stage.hide();
 //        player = new HumanPlayer("She-ra");
     }
-
-    
-
-    public String getPlayer() {
-        return player.getName();
-    }
-
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
+    }    
+    
 }

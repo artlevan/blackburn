@@ -18,21 +18,30 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author student
+ * @author arthur levan estimated time: 8 hours 
+ * actual time: 7 hours
  */
 public class RoshamboRunner extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+        
         Stage dialogStage = new Stage();
-        Parent vb = FXMLLoader.load(getClass().getResource("Dialog.fxml"));
-        Scene dialogScene = new Scene(vb);
+        DialogController.root = FXMLLoader.load(getClass().getResource("Dialog.fxml"));
+        Scene dialogScene = new Scene(DialogController.root);
         dialogStage.setScene(dialogScene);
         dialogStage.showAndWait();
-
-        Parent root = FXMLLoader.load(getClass().getResource("Roshambo.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+        
+        Stage gameStage = new Stage();
+        RoshamboController.root = FXMLLoader.load(getClass().getResource("Roshambo.fxml"));
+        Scene scene = new Scene(RoshamboController.root);
+        gameStage.setScene(scene);
+        gameStage.showAndWait();
+        
+        
+        StatisticsController.root = FXMLLoader.load(getClass().getResource("Statistics.fxml"));
+        Scene statScene = new Scene(StatisticsController.root);
+        primaryStage.setScene(statScene);
         primaryStage.show();
 
     }

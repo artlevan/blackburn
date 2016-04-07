@@ -10,16 +10,16 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.blackburn.cs.cs212sp16.roshambo.levan.DialogController">
+<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.blackburn.cs.cs212sp16.roshambo.levan.DialogController">
    <children>
-      <Label alignment="TOP_CENTER" prefHeight="27.0" prefWidth="142.0" text="Select Your Character" textAlignment="JUSTIFY" />
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="660.0">
+      <Label alignment="TOP_CENTER" prefHeight="24.0" prefWidth="142.0" text="Select Your Character" textAlignment="JUSTIFY" />
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="649.0">
          <children>
             <VBox fillWidth="false" GridPane.rowIndex="1">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#handleShera">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -28,7 +28,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleScarlett">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -37,7 +37,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handlePenny">
+                        <Button mnemonicParsing="false" onAction="#handleButton" prefHeight="126.0" prefWidth="227.0">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -50,7 +50,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#handleKim">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -59,7 +59,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleJem">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -68,7 +68,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleCheetara">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -81,7 +81,7 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#handleSteelheart">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -90,7 +90,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleCoogan">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>
@@ -99,7 +99,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#handleGross">
+                        <Button mnemonicParsing="false" onAction="#handleButton">
                            <graphic>
                               <ImageView fitHeight="118.0" fitWidth="200.0" pickOnBounds="true">
                                  <image>

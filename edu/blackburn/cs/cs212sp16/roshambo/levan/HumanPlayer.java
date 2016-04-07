@@ -7,7 +7,7 @@ package edu.blackburn.cs.cs212sp16.roshambo.levan;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 public class HumanPlayer extends Player {
     private String choice;

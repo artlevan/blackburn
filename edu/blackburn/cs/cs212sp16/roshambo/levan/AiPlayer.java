@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 public class AiPlayer extends Player {
     private String choice;

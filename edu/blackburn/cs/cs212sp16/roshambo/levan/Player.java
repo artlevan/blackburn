@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 public abstract class Player {
 
