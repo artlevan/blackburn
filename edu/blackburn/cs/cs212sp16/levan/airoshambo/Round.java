@@ -20,19 +20,27 @@ public class Round {
     }
 
     public Winner getWinner() {
-        if (p1Move.equals(Move.ROCK) && p2Move.equals(Move.SCISSORS)) {
+        if (this.p1Move.equals(Move.ROCK) && this.p2Move.equals(Move.SCISSORS)) {
             return Winner.P1;
-        }
-        else if (p1Move.equals(Move.PAPER) && p2Move.equals(Move.ROCK)) {
+        }  if (this.p1Move.equals(Move.PAPER) && this.p2Move.equals(Move.ROCK)) {
             return Winner.P1;
-        }
-        else if (p1Move.equals(Move.SCISSORS) && p2Move.equals(Move.PAPER)) {
+        }if (this.p1Move.equals(Move.SCISSORS) && this.p2Move.equals(Move.PAPER)) {
             return Winner.P1;
-        }
-        else if (p1Move.equals(p2Move)) {
+        }  if (this.p1Move.equals(this.p2Move)) {
             return Winner.TIE;
         }
 
         return Winner.P2;
+    }
+
+    public Move getP2Move() {
+        if (this.p2Move.equals(Move.SCISSORS)) {
+            return Move.SCISSORS;
+        }
+        if (this.p2Move.equals(Move.ROCK)) {
+            return Move.ROCK;
+        } else {
+            return Move.PAPER;
+        }
     }
 }

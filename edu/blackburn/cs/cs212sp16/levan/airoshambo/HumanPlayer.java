@@ -14,7 +14,7 @@ import java.util.*;
 public class HumanPlayer extends Player {
 
     Scanner input = new Scanner(System.in);
-    int choice;
+    private Move choice;
 
     public HumanPlayer(String name) {
         this.name = name;
@@ -23,24 +23,12 @@ public class HumanPlayer extends Player {
     public void addResult(Round round) {
 
     }
+    public void setMove(Move move){
+        this.choice = move;
+    }
 
     public Move getMove() {
-        System.out.print("Please select your move: ");
-        System.out.println("[1] Rock [2] Paper [3] Scissors");
-        choice = input.nextInt();
-        while ((choice > 3) || (choice < 1)) {
-            System.out.println("Please select only numbers 1, 2, or 3");
-            System.out.print("Please select your move: ");
-            System.out.println("[1] Rock [2] Paper [3] Scissors");
-            choice = input.nextInt();
-        }
-        if (choice == 1) {
-            return Move.ROCK;
-        } else if (choice == 2) {
-            return Move.PAPER;
-        } else {
-            return Move.SCISSORS;
-        }
+        return this.choice;
 
     }
 }
