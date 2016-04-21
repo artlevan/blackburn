@@ -15,37 +15,40 @@ public class Game {
     private HumanPlayer p1;
     private ComputerPlayer p2;
     private Round r;
-    private int rounds;
-    private int count = 0;
 
-    public Game(HumanPlayer p1, ComputerPlayer p2, int rounds) {
+    public Game(HumanPlayer p1, ComputerPlayer p2) {
         this.p1 = p1;
         this.p2 = p2;
-        this.rounds = rounds;
         this.stats = new Statistics();
     }
 
+    //Returns the current Stats of the Game.
     public Statistics getStats() {
         return this.stats;
     }
-    public void humanMove(Move move){
+
+    //Sets the Player's move from the controller
+    public void humanMove(Move move) {
         p1.setMove(move);
     }
+
+    //Creates a new round and adds the results of the rounds to the Statistics
     public void run() {
-//        while (count != this.rounds) {
+
         this.r = new Round(p1.getMove(), p2.getMove());
         stats.addRound();
         stats.setWins(r.getWinner());
- //        }
+
     }
-    
-    public Winner roundWinner(){
+
+    //Returns the current Round's winner
+    public Winner roundWinner() {
         return this.r.getWinner();
     }
-    
-    public Move p2Move(){
+
+    //Returns the RandomPlayer's move
+    public Move p2Move() {
         return this.r.getP2Move();
     }
-    
-    
+
 }

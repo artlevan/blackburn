@@ -7,7 +7,7 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 public class Round {
 
@@ -18,7 +18,7 @@ public class Round {
         this.p1Move = p1Move;
         this.p2Move = p2Move;
     }
-
+    //Determines the winner of a Round based on the Player's Move
     public Winner getWinner() {
         if (this.p1Move.equals(Move.ROCK) && this.p2Move.equals(Move.SCISSORS)) {
             return Winner.P1;
@@ -32,7 +32,18 @@ public class Round {
 
         return Winner.P2;
     }
-
+        //Returns the Move of the Player 
+    public Move getP1Move() {
+        if (this.p1Move.equals(Move.SCISSORS)) {
+            return Move.SCISSORS;
+        }
+        if (this.p1Move.equals(Move.ROCK)) {
+            return Move.ROCK;
+        } else {
+            return Move.PAPER;
+        }
+    }
+    //Returns the Move of the RandomPlayer 
     public Move getP2Move() {
         if (this.p2Move.equals(Move.SCISSORS)) {
             return Move.SCISSORS;

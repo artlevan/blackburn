@@ -7,7 +7,7 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 import java.io.IOException;
 import java.util.*;

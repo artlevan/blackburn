@@ -19,14 +19,11 @@ public class HumanPlayer extends Player {
     public HumanPlayer(String name) {
         this.name = name;
     }
-
-    public void addResult(Round round) {
-
-    }
+    //Sets the Player's move
     public void setMove(Move move){
         this.choice = move;
     }
-
+    //Returns the Player's move
     public Move getMove() {
         return this.choice;
 

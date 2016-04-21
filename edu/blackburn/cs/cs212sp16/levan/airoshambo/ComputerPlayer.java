@@ -12,7 +12,7 @@ import java.util.Random;
  * @author Artmar
  */
 public class ComputerPlayer extends Player {
-
+    private Move move;
     private Random r = new Random();
 
     public ComputerPlayer(String name) {
@@ -30,7 +30,8 @@ public class ComputerPlayer extends Player {
         } else if (rng == 2) {
             return Move.PAPER;
         } else {
-            return Move.SCISSORS;
+           return Move.SCISSORS;
         }
     }
+
 }

@@ -7,47 +7,72 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
 
 /**
  *
- * @author Artmar
+ * @author Arthur
  */
 public class CircularLinkedList {
 
-    private ListElement firstElement;
-    private ListElement currentElement;
+    private Node originalNode;
+    private Node currentNode;
 
     public CircularLinkedList() {
 
-        this.firstElement = null;
-        this.currentElement = null;
+        this.originalNode = null;
+        this.currentNode = null;
     }
 
+    //Adds a round to the end of the list and links back to the original
     public void add(Round round) {
-        if (this.firstElement == null) {
-            this.firstElement = new ListElement(round);
-        } else if (this.firstElement.getNextElement() == null) {
-            this.currentElement = new ListElement(round);
-            this.firstElement.setNextElement(currentElement);
+        if (this.originalNode == null) {
+            this.originalNode = new Node(round);
+        } else if (this.originalNode.getNextNode() == null) {
+            this.currentNode = new Node(round);
+            this.originalNode.setNextNode(this.currentNode);
         } else {
-            while (hasNext()) {
-                getNext();
-            }
-            this.currentElement.setNextElement(new ListElement(round));
+            rotate();
+            this.currentNode.setNextNode(new Node(round));
         }
-        this.currentElement = this.firstElement;
+        this.currentNode = this.originalNode;
     }
 
+    //Rotates through the list while it has a next Node
+    public void rotate() {
+        do {
+            getNext();
+            
+        } while (hasNext());
+
+    }
+
+    //Determines if the current Node has a next node
     public boolean hasNext() {
-        if (this.currentElement.getNextElement() != null) {
+        if (this.currentNode.getNextNode() != null) {
             return true;
         }
         return false;
     }
-
-    public Round getNext() {
-        if (!hasNext()) {
-            this.currentElement = this.firstElement.getNextElement();
+     //Gets the next Node of the current Node
+    public void getNext(){
+            if (!hasNext()) {
+            this.currentNode = this.originalNode.getNextNode();
         } else {
-            this.currentElement = this.currentElement.getNextElement();
+            this.currentNode = this.currentNode.getNextNode();
         }
-        return this.currentElement.getRound();
+    }
+    //Gets the next Node of the current Node and returns the Round of it.
+    public Round getNextRound() {
+        getNext();
+        return this.currentNode.getRound();
+    }
+    //Suggests a Move to the computer based on the Player's last move
+    public Move suggestMove() {
+        getNextRound();
+        if (this.currentNode.getRound().getP1Move().equals(Move.ROCK)) {
+            return Move.PAPER;
+        } else if (this.currentNode.getRound().getP1Move().equals(Move.PAPER)) {
+            return Move.SCISSORS;
+        } else {
+            return Move.ROCK;
+        }
+
     }
 }

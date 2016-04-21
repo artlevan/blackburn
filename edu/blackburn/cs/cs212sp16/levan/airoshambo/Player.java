@@ -14,10 +14,6 @@ public abstract class Player {
     
 
     
-    public void addResult(Round round){
-        
-    }
-    
     public Move play(){
         return null;
     }

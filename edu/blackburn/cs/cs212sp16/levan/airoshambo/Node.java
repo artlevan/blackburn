@@ -9,27 +9,27 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
 
 /**
  *
- * @author dakota.tebbe
+ * @author arthur.levan
  */
-public class ListElement {
+public class Node {
     private Round round;
-    private ListElement nextElement;
+    private Node nextNode;
     
-    public ListElement(Round round){
+    public Node(Round round){
         this.round = round;
-        nextElement = null;
+        nextNode = null;
     }
-    
+    //Returns the current round of this Node
     public Round getRound() {
         return this.round;
     }
-    
-    public ListElement getNextElement() {
-        return nextElement;
+    //Returns the next linked Node if not null
+    public Node getNextNode() {
+        return nextNode;
     }
-
-    public void setNextElement(ListElement nextElement) {
-        this.nextElement = nextElement;
+    //Sets the next linked Node
+    public void setNextNode(Node nextNode) {
+        this.nextNode = nextNode;
     }
     
     

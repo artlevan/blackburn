@@ -17,17 +17,14 @@ import javafx.stage.Stage;
 /**
  * FXML Controller class
  *
- * @author Artmar
+ * @author Arthur
  */
 public class AiRoshamboController implements Initializable {
 
-    private int count = 0;
-    private int rounds = 10;
     private Move move;
     private HumanPlayer p1 = new HumanPlayer("");
     private ComputerPlayer p2 = new ComputerPlayer("Roshambot");
-    private Game game = new Game(p1, p2, rounds);
-
+    private Game game = new Game(p1, p2);
 
     /**
      * Initializes the controller class.
@@ -40,19 +37,21 @@ public class AiRoshamboController implements Initializable {
 
     @FXML
     private TextField player;
-    
+
     @FXML
     private TextField computer;
-    
+
     @FXML
     private TextField stats;
-    
-    @FXML
-    private TextField totalRounds;
-    
 
-    
- 
+
+
+    @FXML
+    private void handleExit(ActionEvent event) {
+        Stage stage = (Stage) root.getScene().getWindow();
+        stage.hide();
+    }
+
     @FXML
     private void handleRock(ActionEvent event) {
         this.move = Move.ROCK;
@@ -92,20 +91,14 @@ public class AiRoshamboController implements Initializable {
     }
 
     public void playGame() {
-        totalRounds.setText("Best of 10 Rounds");
-        
-        if (count < rounds) {
-            game.run();
-            
-            showWinner(game.roundWinner());
-            computer.setText("P2 Chose " + game.p2Move());
-            count++;
-            stats.setText(game.getStats() + "");
-        } else {
-            stats.setText(game.getStats() + "");
-            Stage stage = (Stage) root.getScene().getWindow();
-            stage.hide();
-        }
+
+
+        game.run();
+
+        showWinner(game.roundWinner());
+        computer.setText("P2 Chose " + game.p2Move());
+
+        stats.setText(game.getStats() + "");
 
     }
 
