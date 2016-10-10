@@ -1,7 +1,7 @@
 --Author: arthur.levan@blackburn.edu
 --Date: 10/7/16
 --Estimate: 5 hours
---Actual: 
+--Actual: 4 
 
 drop table if exists student;
 drop table if exists studentworker;
@@ -57,9 +57,11 @@ create table incidentreport
 (
 incidentid int not null,
 workerid int not null,
-emergency bit not null,
+procedureid int not null,
+emergency boolean not null,
 summary text not null,
 incidentdate date,
-primary key (incidentid, workerid),
-foreign key (workerid) references studentworker(workerid)
+primary key (incidentid, workerid, procedureid),
+foreign key (workerid) references studentworker(workerid),
+foreign key (procedureid) references procedure(procedureid)
 );
