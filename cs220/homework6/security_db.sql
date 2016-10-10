@@ -65,3 +65,24 @@ primary key (incidentid, workerid, procedureid),
 foreign key (workerid) references studentworker(workerid),
 foreign key (procedureid) references procedure(procedureid)
 );
+
+CREATE VIEW worker  AS
+SELECT
+	s.firstname AS studentfirstname,
+	s.lastname AS studentlastname,
+	sw.workerid AS workerid
+FROM
+	student s,
+	studentworker sw
+WHERE
+	s.studentid = sw.studentid;
+
+CREATE VIEW incident AS
+SELECT
+	sw.workerid AS workerid,
+	ir.incidentid AS incidentid
+FROM
+	studentworker sw,
+	incidentreport ir
+WHERE
+	sw.workerid = ir.workerid;
