@@ -1,0 +1,11 @@
+--Arthur Levan
+--Estimated Time: 2 hours
+
+class Cuboid
+	class Rectangle
+    attr_reader :width, :height
+attr_reader :height, :width, :depth
+
+	def initialize(height, width, depth)
+		@width 
+
