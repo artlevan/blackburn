@@ -1,6 +1,6 @@
 #Arthur Levan
-#Estimated Time Two Hours
-
+#Estimated Time: 2 Hours
+#Actual Time: 3 Hours
 class Cuboid
     attr_reader :height, :width, :depth
 
@@ -76,7 +76,7 @@ if __FILE__ == $0
 	c.input()
 	puts "The new numbers are "
 	puts c.numbers()
-	puts "Would you like to change another field? (Y/N)"
+	puts "Would you like to change a field? (Y/N)"
 	input = gets.chomp.upcase
 		if input == "N"
 			break
