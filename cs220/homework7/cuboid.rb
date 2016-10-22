@@ -19,24 +19,27 @@ class Cuboid
     end
 
     def set_height(newheight)
-        if newheight == 0
-            puts "Can't make height 0"
+        if newheight <= 0
+            puts "Can't make height #{newheight}"
+		@height = @height
         else
             @height = newheight
         end
     end
 
     def set_width(newwidth)
-        if newwidth == 0
-            puts "Can't make width 0"
+        if newwidth <= 0
+            puts "Can't make width #{newwidth}"
+		@width = @width
         else 
             @width = newwidth
         end
     end
 
     def set_depth(newdepth)
-        if newdepth == 0
-            puts "Can't make depth 0"
+        if newdepth <= 0
+            puts "Can't make depth #{newdepth}"
+		@depth = @depth     
         else 
             @depth = newdepth
         end
