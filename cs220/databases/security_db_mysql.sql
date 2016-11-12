@@ -4,7 +4,7 @@ drop table if exists student;
 drop table if exists studentworker;
 drop table if exists department;
 drop table if exists facility;
-drop table if exists process;
+drop table if exists instruction;
 drop table if exists incident;
 SET foreign_key_checks = 1;
 
@@ -48,22 +48,22 @@ foreign key (studentid) references student(studentid),
 foreign key (departmentid) references department(departmentid)
 );
 
-create table process
+create table instruction
 (
-processid integer not null primary key,
-processname varchar(64) not null
+instructionid integer not null primary key,
+instructionname varchar(64) not null
 );
 
 create table incident
 (
 incidentid integer not null primary key,
 workerid integer not null,
-processid integer not null,
+instructionid integer not null,
 emergency boolean not null,
 summary text not null,
 incidentdate date,
 foreign key (workerid) references studentworker(workerid),
-foreign key (processid) references process(processid)
+foreign key (instructionid) references instruction(instructionid)
 );
 
 CREATE VIEW worker AS

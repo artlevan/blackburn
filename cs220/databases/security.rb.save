@@ -28,7 +28,7 @@ class Student
 
     def add()
 	connection = DatabaseConnection.instance.connection
-	statement = connection.prepare("insert into student (studentid, firstname, lastname) values (?, ?, ?)")
+	statement = connection.prepare( "insert into student (studentid, firstname, lastname) values (?, ?, ?)")
 	statement.execute(@studentid, @firstname, @lastname)
 	statement.close()
     end
@@ -67,7 +67,7 @@ class Facility
 
     def add()
 	connection = DatabaseConnection.instance.connection
-        statement = connection.prepare("insert into facility (facilityid, facilityname) values (?,?)")
+        statement = connection.prepare( "INSERT INTO facility (facilityid, facilityname) VALUES (?,?)")
         statement.execute(@facilityid, @facilityname)
         statement.close()
     end
@@ -100,7 +100,7 @@ class Department
 
     def add()
         connection = DatabaseConnection.instance.connection
-        statement = connection.prepare("insert into department (departmentid, departmentname, facilityid, phonenumber) values (?,?,?,?)")
+        statement = connection.prepare( "INSERT INTO department (departmentid, departmentname, facilityid, phonenumber) VALUES (?,?,?,?)")
         statement.execute(@departmentid, @departmentname, @facilityid, @phonenumber)
         statement.close()
     end
@@ -133,14 +133,14 @@ class StudentWorker
 
     def save()
         connection = DatabaseConnection.instance.connection
-        statement = connection.prepare("update studentworker set studentid = ?, departmentid = ?, position = ? where workerid = ?")
+        statement = connection.prepare("UPDATE studentworker set studentid = ?, departmentid = ?, position = ? where workerid = ?")
         statement.execute(@studentid, @departmentid, @position, @workerid)
         statement.close()
     end
 
     def add()
         connection = DatabaseConnection.instance.connection
-        statement = connection.prepare("insert into studentworker (studentid, departmentid, workerid, position) values (?,?,?,?)")
+        statement = connection.prepare( "INSERT INTO studentworker (studentid, departmentid, workerid, position) VALUES (?,?,?,?)")
         statement.execute(@studentid, @departmentid, @workerid, @position)
         statement.close()
     end
@@ -167,7 +167,7 @@ class Instruction
 
     def add()
         connection = DatabaseConnection.instance.connection
-        statement = connection.prepare("insert into instruction (instructionid, instructionname) values (?,?)")
+        statement = connection.prepare( "INSERT INTO instruction (instructionid, instructionname) VALUES (?,?)")
         statement.execute(@instructionid, @instructionname)
         statement.close()
     end
@@ -206,7 +206,7 @@ class IncidentReport
 
     def add()
         connection = DatabaseConnection.instance.connection
-        statement = connection.prepare( "insert into incident (incidentid, workerid, instructionid, emergency, summary, incidentdate) values (?,?,?,?,?,?)")
+        statement = connection.prepare( "INSERT INTO incident (incidentid, workerid, instructionid, emergency, summary, incidentdate) VALUES (?,?,?,?,?,?)")
         statement.execute(@incidentid, @workerid, @instructionid, @emergency, @summary, @date)
         statement.close()
     end
