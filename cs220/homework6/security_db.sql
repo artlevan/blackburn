@@ -9,8 +9,11 @@ drop table if exists department;
 drop table if exists facility;
 drop table if exists procedure;
 drop table if exists incidentreport;
+drop database if exists security;
 
 create database security;
+
+use security;
 
 create table student
 (

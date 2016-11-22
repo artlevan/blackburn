@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+root 'text_reverser#input'
+match '/reverse' => 'text_reverser#reverse', via: :get
 end
