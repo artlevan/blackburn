@@ -9,17 +9,17 @@ class CalculateController < ApplicationController
   end
 
   def add
-    @output = params["input1"].to_i + params["input2"].to_i
+    @output = params["input1"].to_f + params["input2"].to_f
     render 'output'
   end
 
   def subtract
-    @output = params["input1"].to_i - params["input2"].to_i
+    @output = params["input1"].to_f - params["input2"].to_f
     render 'output'
   end
 
   def multiply
-    @output = params["input1"].to_i * params["input2"].to_i
+    @output = params["input1"].to_f * params["input2"].to_f
     render 'output'
   end
 
