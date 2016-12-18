@@ -1,0 +1,7 @@
+<h1>Edit an Existing Student</h1>
+<%= form_tag '/security/savestudent' do %>
+<p><input type="text" name="firstname" value="<%= @student.firstname %>"/> First Name</p>
+<p><input type="text" name="lastname" value="<%= @student.lastname %>"/> Last Name</p>
+<p><input type="text" name="studentid" value="<%= @student.studentid %>" readonly style="background-color:#EBEBE4;"/> Student ID</p>
+<p><input type="submit" value="Save"/></p>
+<% end %>
