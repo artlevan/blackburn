@@ -14,37 +14,47 @@ import java.util.*;
 
 public class BinaryConversion {
 
-    public static int binaryToInt(String input) {
-        double j = 0;
+    public static int binaryToInt(StringBuilder input) {
+        int j = 0;
         for (int i = 0; i < input.length(); i++) {
             if (input.charAt(i) == '1') {
-                j = j + Math.pow(2, input.length() - 1 - i);
+                j = j + (int) Math.pow(2, input.length() - 1 - i);
+
             }
         }
-        return (int) j;
+        return j;
     }
 
-    public static String stringToBinary(String input) {
-        BigInteger process = new BigInteger(input, 16);
-        return process.toString(2);
-       
+    public static StringBuilder intToBinary(int input) {
+        StringBuilder s = new StringBuilder();
+        int x = input;
+
+
+        while (x > 0) {
+            int r = x % 2;
+            s.append(r);
+            x = x / 2;
+        }
+        return s.reverse();
     }
 
     public static void main(String[] args) {
         String beta;
         Scanner input = new Scanner(System.in);
         int alpha = 432;
-        System.out.println("Please enter a binary number");
-        beta = input.nextLine();
-        System.out.println("The Binary number you entered is: " + binaryToInt(beta));
-        System.out.println("Please enter a number or word");
-        beta = input.nextLine();
-        System.out.println("The number or word you entered is " + stringToBinary(beta) + " in Binary");
+//        System.out.println(Integer.toBinaryString(10));
+        System.out.println(intToBinary(10));
+        System.out.println("The number is: " + binaryToInt(intToBinary(10)));
+        System.out.println("The size? is: " + intToBinary(10).length());
+//        System.out.println("Please enter a binary number");
+//        beta = input.nextLine();
+//        System.out.println("The Binary number you entered is: " + binaryToInt(beta));
+//        System.out.println("Please enter a number or word");
+//        beta = input.nextLine();
+//        System.out.println("The number or word you entered is " + stringToBinary(beta) + " in Binary");
 
 //        System.out.println(Integer.toBinaryString(61));
 //        System.out.println(binaryToInt(gamma));
-
 //        System.out.println(Integer.parseInt(beta, 2));
-
     }
 }
