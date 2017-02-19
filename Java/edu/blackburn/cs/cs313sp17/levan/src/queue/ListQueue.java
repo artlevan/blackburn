@@ -15,12 +15,11 @@ public class ListQueue<E> implements Queue<E> {
 
         private E value;
         private Node next;
-
+        
         public Node(E data) {
             value = data;
             next = null;
         }
-
     }
     //Constructor
     public ListQueue() {
