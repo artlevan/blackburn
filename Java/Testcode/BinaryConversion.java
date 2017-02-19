@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Testcode;
+package Java.Testcode;
 
 /**
  *
  * @author arthur.levan
  */
-import java.math.BigInteger;
 import java.util.*;
 
 public class BinaryConversion {
