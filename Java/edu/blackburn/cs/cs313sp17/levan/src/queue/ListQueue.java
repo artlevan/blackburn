@@ -9,28 +9,31 @@ public class ListQueue<E> implements Queue<E> {
     private int count;
     private Node first = null;
     private Node last = null;
-    
+
     //Node class that will contain data
     private class Node<E> {
 
         private E value;
         private Node next;
-        
+
         public Node(E data) {
             value = data;
             next = null;
         }
     }
+
     //Constructor
     public ListQueue() {
         first = null;
         last = null;
         count = 0;
     }
+
     //Returns True if the list is empty
     public boolean isEmpty() {
         return (first == null);
     }
+
     //Returns a String of the Queue in the Format of < a b c >
     @Override
     public String toString() {
@@ -40,7 +43,6 @@ public class ListQueue<E> implements Queue<E> {
         } else {
             StringBuilder sb = new StringBuilder();
             sb.append("< ");
-
             Node current = first;
             sb.append(current.value);
             current = current.next;
@@ -53,6 +55,7 @@ public class ListQueue<E> implements Queue<E> {
             return sb.toString();
         }
     }
+
     //Adds an item to the back of the queue
     public void enqueue(E data) {
         Node lastValue = last;
@@ -66,6 +69,7 @@ public class ListQueue<E> implements Queue<E> {
         }
         count++;
     }
+
     //Returns and Removes the item at the front of the queue
     public E dequeue() {
         if (isEmpty()) {
@@ -77,11 +81,13 @@ public class ListQueue<E> implements Queue<E> {
             return frontValue;
         }
     }
+
     //Resets the list
     public void clear() {
         first = null;
         last = null;
     }
+
     //Returns the item in the front of the queue without removing it
     public E front() {
         if (isEmpty()) {
@@ -90,6 +96,7 @@ public class ListQueue<E> implements Queue<E> {
             return (E) first.value;
         }
     }
+
     //Returns the current length of the Queue
     public int length() {
         return count;
