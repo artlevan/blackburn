@@ -1,7 +1,6 @@
 package Java.edu.blackburn.cs.cs313sp17.levan.src.queue;
 
 /**
- *
  * @author arthur.levan
  */
 public class ListQueue<E> implements Queue<E> {
