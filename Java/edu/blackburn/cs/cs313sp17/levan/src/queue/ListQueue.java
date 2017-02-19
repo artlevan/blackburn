@@ -41,13 +41,13 @@ public class ListQueue<E> implements Queue<E> {
             StringBuilder sb = new StringBuilder();
             sb.append("< ");
 
-            Node curr = first;
-            sb.append(curr.value);
-            curr = curr.next;
-            while (curr != null) {
+            Node current = first;
+            sb.append(current.value);
+            current = current.next;
+            while (current != null) {
                 sb.append(" ");
-                sb.append(curr.value);
-                curr = curr.next;
+                sb.append(current.value);
+                current = current.next;
             }
             sb.append(" >");
             return sb.toString();
