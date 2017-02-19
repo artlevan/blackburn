@@ -35,7 +35,7 @@ public class ListQueue<E> implements Queue<E> {
     @Override
     public String toString() {
         if (first == null && last == null) {
-            String empty = " ";
+            String empty = "< >";
             return empty;
         } else {
             StringBuilder sb = new StringBuilder();
