@@ -62,10 +62,8 @@ public class ListQueue<E> implements Queue<E> {
         last = new Node(data);
         if (isEmpty()) {
             first = last;
-
         } else {
             lastValue.next = last;
-
         }
         count++;
     }
@@ -100,6 +98,5 @@ public class ListQueue<E> implements Queue<E> {
     //Returns the current length of the Queue
     public int length() {
         return count;
-
     }
 }
