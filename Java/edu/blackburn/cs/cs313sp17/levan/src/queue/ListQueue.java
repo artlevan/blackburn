@@ -57,12 +57,12 @@ public class ListQueue<E> implements Queue<E> {
 
     //Adds an item to the back of the queue
     public void enqueue(E data) {
-        Node lastValue = last;
+        Node backValue = last;
         last = new Node(data);
         if (isEmpty()) {
             first = last;
         } else {
-            lastValue.next = last;
+            backValue.next = last;
         }
         count++;
     }
