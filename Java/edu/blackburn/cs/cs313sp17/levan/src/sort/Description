@@ -1,0 +1,8 @@
+We will create fixed arrays with sizes: 10, 100, 1000, 10000, 100000, 125000, 250000, 500000, 625000, and 1000000. 
+We will then fill each array with integers from sizes 0 to 1,000,000. This will allow us a broad range of results 
+regarding how each sorting algorithm handles various-sized inputs, allowing us to create a more in-depth analysis of the algorithms.
+
+We will then pass in each array to each sorting method, after modifying the code to keep track of swaps and comparisons
+with class-level variables, as well as another variable that will measure the runtime of each algorithm. (System time.)
+With this implementation, we should hopefully see clearly the differences in performance between each sorting algorithm 
+in respect to various sized inputs.
