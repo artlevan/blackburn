@@ -17,10 +17,10 @@ public interface Dictionary<Key, E> {
     //Adds to the list
     public void insert(Key k, E e);
 
-    //Removes from the list
+    //Returns the String and removes it from the list
     public E remove(Key k);
 
-    //Finds an item in the list
+    //Finds an item in the list and returns the String
     public E find(Key k);
 
     //Returns the size of the list
