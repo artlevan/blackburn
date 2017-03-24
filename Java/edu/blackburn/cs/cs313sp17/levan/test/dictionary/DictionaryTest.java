@@ -15,24 +15,31 @@ import static org.junit.Assert.*;
 /**
  *
  * @author arthur.levan
+ *
+ */
+
+/*
+ * Your unit test should include one test that reads in a large text file of strings (one per line),
+ *  and inserts them into the Dictionary, then tests the functionality of all the other methods.
+ * You are not required to unit test your report method, however, you will lose points if it does not work correctly.
  */
 public class DictionaryTest {
-    
+
     public DictionaryTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
