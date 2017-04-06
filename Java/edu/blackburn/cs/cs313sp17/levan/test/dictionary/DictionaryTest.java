@@ -1,10 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Java.edu.blackburn.cs.cs313sp17.levan.test.dictionary;
 
+import Java.edu.blackburn.cs.cs313sp17.levan.src.dictionary.Dictionary;
+import Java.edu.blackburn.cs.cs313sp17.levan.src.dictionary.DictionaryImpl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,39 +11,55 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author arthur.levan
- *
- */
-
-/*
- * Your unit test should include one test that reads in a large text file of strings (one per line),
- *  and inserts them into the Dictionary, then tests the functionality of all the other methods.
- * You are not required to unit test your report method, however, you will lose points if it does not work correctly.
+ * @author kevin
  */
 public class DictionaryTest {
-
+    
     public DictionaryTest() {
     }
-
+    
     @BeforeClass
     public static void setUpClass() {
     }
-
+    
     @AfterClass
     public static void tearDownClass() {
     }
-
+    
     @Before
     public void setUp() {
     }
-
+    
     @After
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    /*
+     * This is a simple test case that is only meant to verify
+     * That student implementation makes proper use of Java generics
+     * and return types at the top-most level. It is NOT intended
+     * as a thorough test of functionality
+    */
+    @Test
+    public void GenericTest() {
+        // Build dictionary that is plenty big enough
+        // Get Java generics and diamond notation right
+        DictionaryImpl<Integer, String> D = new DictionaryImpl<>(11);
+        
+        // Insert a few things
+        D.insert("Apple".hashCode(), "Apple");
+        D.insert("Banana".hashCode(), "Banana");
+        D.insert("Carrot".hashCode(), "Carrot");
+        D.insert("Date".hashCode(), "Date");
+        
+        // Search for a couple of them and make sure they are there
+        assertEquals("Apple", D.find("Apple".hashCode()));
+        assertEquals("Carrot", D.find("Carrot".hashCode()));
+        
+        // Remove something...
+        D.remove("Carrot".hashCode());
+        
+        // ...and make sure it's no longer in Dictionary
+        assertEquals(null, D.find("Carrot".hashCode()));
+    }
 }

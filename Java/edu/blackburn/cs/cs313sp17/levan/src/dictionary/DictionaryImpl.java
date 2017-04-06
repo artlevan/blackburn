@@ -10,14 +10,18 @@ import java.util.LinkedList;
 
 public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
 
-    private final LinkedList<KVPair> list = new LinkedList<>();
-    private ArrayList<KVPair> table;
+    private LinkedList<KVPair> list;
+    private ArrayList<LinkedList> table;
     private Integer size;
     private KVPair pair;
+    private int counter = 0;
 
     public DictionaryImpl(Integer size) {
         this.size = size;
         table = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            table.add(new LinkedList<KVPair>());
+        }
     }
 
     @Override
@@ -27,29 +31,50 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
 
     @Override
     public void insert(Key k, E e) {
+        int old = (Integer) k;
         pair = new KVPair(k, e);
-        System.out.println(table.add(pair));
+        int hashKey = (Integer) k % size;
+
+        if (hashKey < 0) {
+            hashKey = -hashKey;
+        }
+        KVPair kp = new KVPair(k, e);
+
+        if ((old = table.get(hashKey).indexOf(kp)) == -1) {
+            table.get(hashKey).add(kp);
+            counter++;
+        } else {
+            table.get(hashKey).set(old, kp);
+        }
+
     }
 
     @Override
     public E remove(Key k) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        E tempValue = null;
+
+        LinkedList<KVPair> temp = table.get((Integer) k % size);
+
+        for (int i = 0; i < temp.size(); i++) {
+            if (k.toString().equals(temp.get(i).getK().toString())) {
+                tempValue = (E) temp.get(i).getValue();
+                table.get((Integer) k % size).remove(i);
+                counter--;
+            }
+        }
+
+        return tempValue;
     }
 
     @Override
     public E find(Key k) {
-        for (int i = 0; i < table.size(); i++) {
-            KVPair s = table.get(i);
-            if (table.contains(s)) {
-                return (E) s.getValue();
+        LinkedList<KVPair> temp = table.get((Integer) k % size);
+
+        for (int i = 0; i < temp.size(); i++) {
+            if (k.toString().equals(temp.get(i).getK().toString())) {
+                return (E) temp.get(i).getValue();
             }
         }
-//
-//        for (KVPair kp : this.table) {
-//            if(kp.getK() == k){
-//                return (E) kp.getValue();
-//            }
-//        }
         return null;
     }
 
@@ -60,7 +85,20 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
 
     @Override
     public void report() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < table.size(); i++) {
+            if (table.get(i).size() > 0) {
+            sb.append("Index ");
+            sb.append(i);
+            sb.append(" has ");
+            sb.append(table.get(i).size());
+            sb.append(" items.\n");
+            }
+        }
+        sb.append("There are ");
+        sb.append(counter);
+        sb.append(" items in the hash table altogether.");
+        System.out.println(sb);
     }
 
 }

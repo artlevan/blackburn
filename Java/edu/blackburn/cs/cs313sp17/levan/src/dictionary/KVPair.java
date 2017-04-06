@@ -20,11 +20,11 @@ public class KVPair<Key, E> {
     }
 
     public Key getK() {
-        return k;
+        return this.k;
     }
 
     public E getValue() {
-        return value;
+        return this.value;
     }
 
 }

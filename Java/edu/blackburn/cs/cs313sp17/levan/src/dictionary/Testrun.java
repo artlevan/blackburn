@@ -6,6 +6,7 @@
 package Java.edu.blackburn.cs.cs313sp17.levan.src.dictionary;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -14,15 +15,21 @@ import java.util.ArrayList;
 public class Testrun {
 
     public static void main(String[] args) {
-        DictionaryImpl Dict = new DictionaryImpl(45653);
+        DictionaryImpl dict = new DictionaryImpl(45653);
         KVPair kp = new KVPair("alpha".hashCode(), "alpha");
         ArrayList<Integer> al = new ArrayList<>(5);
-        System.out.println(Dict.size());
-        Dict.insert("alpha".hashCode(), "alpha");
-        System.out.println(Dict.size());
-        System.out.println(Dict.find(kp.getK()));
-        Dict.clear();
-        System.out.println(Dict.size());
-        
+        Integer a = "alpha".hashCode();
+        Scanner input = new Scanner(System.in);
+        String stuff;
+        System.out.println("put in a word");
+        stuff = input.next();
+        dict.insert(stuff.hashCode(), stuff);
+        System.out.println(dict.size());
+        dict.insert("alpha".hashCode(), "alpha");
+        dict.insert("alpha".hashCode(), "alpha");
+        System.out.println(dict.find("alpha".hashCode()));
+//        dict.remove("alpha".hashCode());
+        dict.report();
+
     }
 }
