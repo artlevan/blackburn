@@ -10,16 +10,19 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
  * @author Artmar
  */
 public class LruPlayer extends ComputerPlayer {
+
     private CircularLinkedList cl = new CircularLinkedList();
     private Move move;
 
     public LruPlayer(String name) {
         super(name);
-      
+
     }
-    public void addRound(Round round){
+
+    public void addRound(Round round) {
         this.cl.add(round);
     }
+
     public void setMove() {
         getMove();
 

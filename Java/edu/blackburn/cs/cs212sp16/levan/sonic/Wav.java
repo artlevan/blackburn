@@ -30,6 +30,7 @@ public class Wav extends Format {
             return false;
         }
     }
+
     //Plays a Wav file
     public void playWav() {
         TinySound.init();

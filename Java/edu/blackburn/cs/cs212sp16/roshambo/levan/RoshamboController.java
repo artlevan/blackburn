@@ -33,28 +33,28 @@ public class RoshamboController implements Initializable {
 
     @FXML
     private ProgressBar playerOneLife;
-    
+
     @FXML
     private ProgressBar playerTwoLife;
-    
+
     @FXML
     private TextField player;
-    
+
     @FXML
     private TextField ai;
-    
+
     @FXML
     private TextField tie;
-    
+
     @FXML
     private TextField playerMove;
-    
+
     @FXML
     private TextField aiMove;
-    
+
     @FXML
     private TextField whoWins;
-    
+
     //Handler for the Rock button.
     @FXML
     private void handleRock(ActionEvent event) {
@@ -62,6 +62,7 @@ public class RoshamboController implements Initializable {
         playerTwo.setChoice();
         playGame();
     }
+
     //Handler for the Paper button.
     @FXML
     private void handlePaper(ActionEvent event) {
@@ -69,6 +70,7 @@ public class RoshamboController implements Initializable {
         playerTwo.setChoice();
         playGame();
     }
+
     //Handler for the Scissor button.
     @FXML
     private void handleScissor(ActionEvent event) {
@@ -76,6 +78,7 @@ public class RoshamboController implements Initializable {
         playerTwo.setChoice();
         playGame();
     }
+
     //Plays the game; unless the player or computer has no life left, then it closes.
     public void playGame() {
         if (playerLife > 0 && aiLife != 0) {
@@ -87,6 +90,7 @@ public class RoshamboController implements Initializable {
         }
 
     }
+
     //Compares the Player and Computer's choices to decide a winner or tie.
     public void compareChoices() {
         if (playerOne.getChoice().equals("rock") && playerTwo.getChoice().equals("scissors")) {

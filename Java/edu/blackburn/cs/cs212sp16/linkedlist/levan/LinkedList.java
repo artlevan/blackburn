@@ -18,6 +18,7 @@ public class LinkedList {
         this.firstElement = null;
         this.currentElement = null;
     }
+
     //Adds a new LinkedElement to the end of the LinkedList.
     public void add(Account acc) {
         if (this.firstElement == null) {
@@ -33,6 +34,7 @@ public class LinkedList {
         }
         this.currentElement = this.firstElement;
     }
+
     //Determines in the currentElement has a next element.
     public boolean hasNext() {
         if (this.currentElement.getNextElement() != null) {
@@ -40,6 +42,7 @@ public class LinkedList {
         }
         return false;
     }
+
     //Gets the nextElement of the currentElement if there is one.
     public Account getNext() {
         if (!hasNext()) {
@@ -86,6 +89,7 @@ public class LinkedList {
         }
         return position;
     }
+
     //Returns the account at the specified position of the list.
     public Account get(int index) {
         Account acc = null;

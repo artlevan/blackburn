@@ -13,8 +13,6 @@ import edu.blackburn.cs.cs212sp16.er.*;
  */
 public class TriageStack extends AbstractStack {
 
-
-
     @Override
     public void push(Patient ptnt) {
         this.top = new ListElement(ptnt);
@@ -24,8 +22,8 @@ public class TriageStack extends AbstractStack {
 
     @Override
     public Patient pop() {
-      
-        if(this.top.getPatient() != null){
+
+        if (this.top.getPatient() != null) {
             this.decrement();
             return this.top.getPatient();
         }

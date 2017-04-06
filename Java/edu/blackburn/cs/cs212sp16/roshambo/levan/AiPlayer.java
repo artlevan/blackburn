@@ -12,6 +12,7 @@ import java.util.Random;
  * @author Arthur
  */
 public class AiPlayer extends Player {
+
     private String choice;
     private Random r = new Random();
 
@@ -30,11 +31,8 @@ public class AiPlayer extends Player {
         }
     }
 
-   
     public String getChoice() {
         return this.choice;
     }
 
 }
-
-

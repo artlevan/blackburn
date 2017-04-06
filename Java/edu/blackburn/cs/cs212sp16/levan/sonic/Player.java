@@ -73,6 +73,7 @@ public class Player {
         ogg = new Ogg(dir);
         ogg.playOgg();
     }
+
     //Plays all supported audio files in a directory
     public void playFile() {
         for (int i = 0; i < this.paths.length; i++) {

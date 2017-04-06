@@ -15,6 +15,4 @@ public class Temperature extends Measurement {
         super(amount, unit);
     }
 
-
-    
 }

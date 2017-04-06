@@ -10,5 +10,5 @@ package edu.blackburn.cs.cs212sp16.levan.sonic;
  * @author arthur.levan
  */
 public class Album {
-    
+
 }

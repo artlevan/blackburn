@@ -10,5 +10,5 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
  * @author Artmar
  */
 public class LruCll extends CircularLinkedList {
-    
+
 }

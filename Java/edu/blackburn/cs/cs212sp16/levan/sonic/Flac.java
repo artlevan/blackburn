@@ -17,11 +17,14 @@ import org.kc7bfi.jflac.apps.Player;
  * @author arthur.levan
  */
 public class Flac extends Format {
+
     private String file;
+
     public Flac(String file) {
         super(".flac");
         this.file = file;
     }
+
     //Determines if a file is a Flac
     public boolean isFlac(String file) {
         if (file.endsWith(".flac")) {
@@ -30,6 +33,7 @@ public class Flac extends Format {
             return false;
         }
     }
+
     //Plays a Flac file
     public void playFlac() {
         try {

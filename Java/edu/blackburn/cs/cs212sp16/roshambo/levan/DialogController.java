@@ -23,18 +23,16 @@ public class DialogController implements Initializable {
 
     HumanPlayer player;
     String character;
-    
+
     @FXML
     static Parent root;
-    
+
     @FXML
     private void handleButton(ActionEvent event) {
         Stage stage = (Stage) root.getScene().getWindow();
         stage.hide();
 //        player = new HumanPlayer("She-ra");
     }
-
-    
 
     public String getPlayer() {
         return player.getName();

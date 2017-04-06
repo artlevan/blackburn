@@ -30,6 +30,7 @@ public class Ogg extends Format {
             return false;
         }
     }
+
     //Plays an Ogg Vorbis file
     public void playOgg() {
         TinySound.init();

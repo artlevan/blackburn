@@ -44,8 +44,6 @@ public class AiRoshamboController implements Initializable {
     @FXML
     private TextField stats;
 
-
-
     @FXML
     private void handleExit(ActionEvent event) {
         Stage stage = (Stage) root.getScene().getWindow();
@@ -91,7 +89,6 @@ public class AiRoshamboController implements Initializable {
     }
 
     public void playGame() {
-
 
         game.run();
 

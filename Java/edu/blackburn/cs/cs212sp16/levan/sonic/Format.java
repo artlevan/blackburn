@@ -10,12 +10,11 @@ package edu.blackburn.cs.cs212sp16.levan.sonic;
  * @author arthur.levan
  */
 public abstract class Format {
+
     private String extension;
 
     public Format(String extension) {
         this.extension = extension;
     }
 
-
-    
 }

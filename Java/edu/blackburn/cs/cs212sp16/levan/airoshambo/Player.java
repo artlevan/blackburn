@@ -10,11 +10,10 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
  * @author Artmar
  */
 public abstract class Player {
-    protected String name;
-    
 
-    
-    public Move play(){
+    protected String name;
+
+    public Move play() {
         return null;
     }
 }

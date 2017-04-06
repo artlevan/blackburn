@@ -22,15 +22,16 @@ public abstract class Player {
         this.name = name;
         this.life = 100;
     }
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    public void loseLife(){
+
+    public void loseLife() {
         this.life = this.life - 10;
     }
-    
-    public int getLife(){
+
+    public int getLife() {
         return this.life;
     }
 

@@ -9,23 +9,26 @@ package edu.blackburn.cs.cs212sp16.levan.garden;
  *
  * @author arthur
  */
-
 //This creates Fruit objects for when the plant matures
 public class Fruit {
+
     private String Type;
     private int Produce;
+
     //Constructor
-    public Fruit(String Type){
+    public Fruit(String Type) {
         this.Type = Type;
     }
+
     //Picks fruit
-    public String pickFruit(){
+    public String pickFruit() {
         Produce++;
         return Type;
     }
+
     //Returns Total
-    public int Amount(){
-       return Produce;
+    public int Amount() {
+        return Produce;
     }
 
 }

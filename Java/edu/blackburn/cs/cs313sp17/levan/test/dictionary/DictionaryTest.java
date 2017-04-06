@@ -14,22 +14,22 @@ import static org.junit.Assert.*;
  * @author kevin
  */
 public class DictionaryTest {
-    
+
     public DictionaryTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -39,26 +39,26 @@ public class DictionaryTest {
      * That student implementation makes proper use of Java generics
      * and return types at the top-most level. It is NOT intended
      * as a thorough test of functionality
-    */
+     */
     @Test
     public void GenericTest() {
         // Build dictionary that is plenty big enough
         // Get Java generics and diamond notation right
         DictionaryImpl<Integer, String> D = new DictionaryImpl<>(11);
-        
+
         // Insert a few things
         D.insert("Apple".hashCode(), "Apple");
         D.insert("Banana".hashCode(), "Banana");
         D.insert("Carrot".hashCode(), "Carrot");
         D.insert("Date".hashCode(), "Date");
-        
+
         // Search for a couple of them and make sure they are there
         assertEquals("Apple", D.find("Apple".hashCode()));
         assertEquals("Carrot", D.find("Carrot".hashCode()));
-        
+
         // Remove something...
         D.remove("Carrot".hashCode());
-        
+
         // ...and make sure it's no longer in Dictionary
         assertEquals(null, D.find("Carrot".hashCode()));
     }

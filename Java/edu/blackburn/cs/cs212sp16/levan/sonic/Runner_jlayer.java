@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package edu.blackburn.cs.cs212sp16.levan.sonic;
+
 import java.util.*;
 import java.io.*;
 import java.util.logging.*;
@@ -15,8 +16,8 @@ import javazoom.jl.player.*;
  * @author arthur.levan
  */
 public class Runner_jlayer {
-    
-  public static void main(String[] args) {
+
+    public static void main(String[] args) {
 //      try {
 //          InputStream i;
 //          i = new FileInputStream("arthur.levan/documents/Whisper.mp3");
@@ -25,9 +26,6 @@ public class Runner_jlayer {
 //      } catch (FileNotFoundException | JavaLayerException ex) {
 //          Logger.getLogger(Runner_jlayer.class.getName()).log(Level.SEVERE, null, ex);
 //      }
-  }
+    }
 
-
-  
-    
 }

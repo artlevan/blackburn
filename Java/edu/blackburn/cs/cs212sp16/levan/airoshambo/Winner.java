@@ -10,5 +10,5 @@ package edu.blackburn.cs.cs212sp16.levan.airoshambo;
  * @author Artmar
  */
 public enum Winner {
-    P1, P2, TIE    
+    P1, P2, TIE
 }

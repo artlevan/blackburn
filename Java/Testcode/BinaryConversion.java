@@ -28,7 +28,6 @@ public class BinaryConversion {
         StringBuilder s = new StringBuilder();
         int x = input;
 
-
         while (x > 0) {
             int r = x % 2;
             s.append(r);

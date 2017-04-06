@@ -16,7 +16,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class AiRoshamboRunner extends Application{
+public class AiRoshamboRunner extends Application {
+
     @Override
     public void start(Stage primaryStage) throws IOException {
 
@@ -27,6 +28,7 @@ public class AiRoshamboRunner extends Application{
         gameStage.showAndWait();
 
     }
+
     public static void main(String[] args) {
 
         launch(args);

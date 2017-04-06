@@ -13,13 +13,13 @@ import java.util.Scanner;
  * @author arthur.levan
  */
 public class Runner {
-    public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    Player p;
 
-    
-        System.out.print ("Please input a Directory to read: ");
-        String toRead  = input.nextLine();
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Player p;
+
+        System.out.print("Please input a Directory to read: ");
+        String toRead = input.nextLine();
         p = new Player(toRead);
         p.listFile();
         p.playFile();

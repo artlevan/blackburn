@@ -21,9 +21,9 @@ public class Testcode_tinysound {
         i = new File("arthur.levan/documents/Whisper.ogg");
         Music m = TinySound.loadMusic(i);
         m.play(false);
-       while (m.playing() == true){
-        m.done();
-       }
+        while (m.playing() == true) {
+            m.done();
+        }
 
     }
 }

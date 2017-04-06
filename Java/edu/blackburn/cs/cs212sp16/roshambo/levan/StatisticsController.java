@@ -5,7 +5,6 @@
  */
 package edu.blackburn.cs.cs212sp16.roshambo.levan;
 
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -20,20 +19,23 @@ import javafx.stage.Stage;
  * @author student
  */
 public class StatisticsController implements Initializable {
-        @FXML
+
+    @FXML
     static Parent root;
+
     @FXML
     private void handleButton(ActionEvent event) {
         Stage stage = (Stage) root.getScene().getWindow();
         stage.hide();
 //        player = new HumanPlayer("She-ra");
     }
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

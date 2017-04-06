@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package edu.blackburn.cs.cs212sp16.levan.sonic;
+
 import java.io.*;
 import java.util.logging.*;
 import javazoom.jl.decoder.JavaLayerException;
@@ -14,8 +15,8 @@ import javazoom.jl.player.*;
  * @author arthur.levan
  */
 public class Testcode_jlayer {
-    
-  public static void main(String[] args) {
+
+    public static void main(String[] args) {
 //      try {
 //          InputStream i;
 //          i = new FileInputStream("arthur.levan/documents/Whisper.mp3");
@@ -24,9 +25,6 @@ public class Testcode_jlayer {
 //      } catch (FileNotFoundException | JavaLayerException ex) {
 //          Logger.getLogger(Testcode_jlayer.class.getName()).log(Level.SEVERE, null, ex);
 //      }
-  }
+    }
 
-
-  
-    
 }

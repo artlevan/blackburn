@@ -16,8 +16,6 @@ public class Testrun {
 
     public static void main(String[] args) {
         DictionaryImpl dict = new DictionaryImpl(45653);
-        KVPair kp = new KVPair("alpha".hashCode(), "alpha");
-        ArrayList<Integer> al = new ArrayList<>(5);
         Integer a = "alpha".hashCode();
         Scanner input = new Scanner(System.in);
         String stuff;
@@ -25,10 +23,12 @@ public class Testrun {
         stuff = input.next();
         dict.insert(stuff.hashCode(), stuff);
         System.out.println(dict.size());
-        dict.insert("alpha".hashCode(), "alpha");
-        dict.insert("alpha".hashCode(), "alpha");
+        for (int i = 0; i < (45653 / 4); i++) {
+            dict.insert("alpha".hashCode(), "alpha");
+        }
         System.out.println(dict.find("alpha".hashCode()));
-//        dict.remove("alpha".hashCode());
+        dict.report();
+        dict.remove(stuff.hashCode());
         dict.report();
 
     }

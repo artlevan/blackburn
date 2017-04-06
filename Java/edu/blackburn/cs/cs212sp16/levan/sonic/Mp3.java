@@ -18,8 +18,9 @@ import javazoom.jl.player.Player;
  * @author arthur.levan
  */
 public class Mp3 extends Format {
+
     private String file;
-    
+
     public Mp3(String file) {
         super(".mp3");
         this.file = file;

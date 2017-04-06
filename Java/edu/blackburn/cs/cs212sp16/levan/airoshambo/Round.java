@@ -18,21 +18,26 @@ public class Round {
         this.p1Move = p1Move;
         this.p2Move = p2Move;
     }
+
     //Determines the winner of a Round based on the Player's Move
     public Winner getWinner() {
         if (this.p1Move.equals(Move.ROCK) && this.p2Move.equals(Move.SCISSORS)) {
             return Winner.P1;
-        }  if (this.p1Move.equals(Move.PAPER) && this.p2Move.equals(Move.ROCK)) {
+        }
+        if (this.p1Move.equals(Move.PAPER) && this.p2Move.equals(Move.ROCK)) {
             return Winner.P1;
-        }if (this.p1Move.equals(Move.SCISSORS) && this.p2Move.equals(Move.PAPER)) {
+        }
+        if (this.p1Move.equals(Move.SCISSORS) && this.p2Move.equals(Move.PAPER)) {
             return Winner.P1;
-        }  if (this.p1Move.equals(this.p2Move)) {
+        }
+        if (this.p1Move.equals(this.p2Move)) {
             return Winner.TIE;
         }
 
         return Winner.P2;
     }
-        //Returns the Move of the Player 
+    //Returns the Move of the Player 
+
     public Move getP1Move() {
         if (this.p1Move.equals(Move.SCISSORS)) {
             return Move.SCISSORS;
@@ -43,6 +48,7 @@ public class Round {
             return Move.PAPER;
         }
     }
+
     //Returns the Move of the RandomPlayer 
     public Move getP2Move() {
         if (this.p2Move.equals(Move.SCISSORS)) {

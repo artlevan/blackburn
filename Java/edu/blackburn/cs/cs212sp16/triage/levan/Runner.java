@@ -41,11 +41,11 @@ public class Runner {
 
         for (int i = 0; i < 100000; i++) {
             Patient p = Patient.newPatient();
-            if (p.getPriority() <= 5){
-            stack.push(p);
+            if (p.getPriority() <= 5) {
+                stack.push(p);
             }
-            if (p.getPriority() > 5){
-            queue.enqueue(p);
+            if (p.getPriority() > 5) {
+                queue.enqueue(p);
             }
             if (i >= 10) {
                 dr.heal();

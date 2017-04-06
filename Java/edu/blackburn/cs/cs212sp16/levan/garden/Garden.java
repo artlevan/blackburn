@@ -10,17 +10,18 @@ package edu.blackburn.cs.cs212sp16.levan.garden;
  * @author arthur
  */
 public class Garden {
+
     private Seed plantOne;
     private Seed plantTwo;
     private Seed plantThree;
-    
-    public Garden(Seed plantOne, Seed plantTwo, Seed plantThree){
+
+    public Garden(Seed plantOne, Seed plantTwo, Seed plantThree) {
         this.plantOne = plantOne;
         this.plantTwo = plantTwo;
         this.plantThree = plantThree;
     }
-    
-    public void seeGarden(){
+
+    public void seeGarden() {
         System.out.println("Your garden has: ");
         this.plantOne.getAge();
 

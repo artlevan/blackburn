@@ -10,18 +10,19 @@ package edu.blackburn.cs.cs212sp16.linkedlist.levan;
  * @author dakota.tebbe
  */
 public class ListElement {
+
     private Account account;
     private ListElement nextElement;
-    
-    public ListElement(Account account){
+
+    public ListElement(Account account) {
         this.account = account;
         nextElement = null;
     }
-    
+
     public Account getAccount() {
         return account;
     }
-    
+
     public ListElement getNextElement() {
         return nextElement;
     }
@@ -29,7 +30,5 @@ public class ListElement {
     public void setNextElement(ListElement nextElement) {
         this.nextElement = nextElement;
     }
-    
-    
-    
+
 }

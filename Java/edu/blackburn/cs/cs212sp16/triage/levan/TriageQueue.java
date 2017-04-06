@@ -17,10 +17,10 @@ public class TriageQueue extends AbstractQueue {
 
     @Override
     public void enqueue(Patient ptnt) {
-        if(this.start == null) {
+        if (this.start == null) {
             this.start = new ListElement(ptnt);
         } else {
-        this.end = new ListElement(ptnt);
+            this.end = new ListElement(ptnt);
         }
         start.setNext(this.end);
         increment();
@@ -33,7 +33,7 @@ public class TriageQueue extends AbstractQueue {
             this.decrement();
             return this.start.getPatient();
         }
-        
+
         return null;
     }
 

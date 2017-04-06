@@ -38,7 +38,7 @@ public class CircularLinkedList {
     public void rotate() {
         do {
             getNext();
-            
+
         } while (hasNext());
 
     }
@@ -50,19 +50,22 @@ public class CircularLinkedList {
         }
         return false;
     }
-     //Gets the next Node of the current Node
-    public void getNext(){
-            if (!hasNext()) {
+    //Gets the next Node of the current Node
+
+    public void getNext() {
+        if (!hasNext()) {
             this.currentNode = this.originalNode.getNextNode();
         } else {
             this.currentNode = this.currentNode.getNextNode();
         }
     }
+
     //Gets the next Node of the current Node and returns the Round of it.
     public Round getNextRound() {
         getNext();
         return this.currentNode.getRound();
     }
+
     //Suggests a Move to the computer based on the Player's last move
     public Move suggestMove() {
         getNextRound();

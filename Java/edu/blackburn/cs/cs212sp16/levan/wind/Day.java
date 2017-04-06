@@ -10,6 +10,7 @@ package edu.blackburn.cs.cs212sp16.levan.wind;
  * @author arthur
  */
 public class Day {
+
     private Temperature temp;
     private Cloud clouds;
 
@@ -38,5 +39,5 @@ public class Day {
     public String toString() {
         return "Day{" + "temp=" + temp + ", clouds=" + clouds + '}';
     }
-    
+
 }
