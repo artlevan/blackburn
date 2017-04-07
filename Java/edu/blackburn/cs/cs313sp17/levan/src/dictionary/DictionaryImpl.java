@@ -14,7 +14,7 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
     private ArrayList<LinkedList> table;
     private final Integer size;
     private KVPair pair;
-    private int totalCount = 0;
+    private int entryCount = 0;
 
     public DictionaryImpl(Integer size) {
         this.size = size;
@@ -31,17 +31,20 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
 
     @Override
     public void insert(Key k, E e) {
-        int oldKey;
         pair = new KVPair(k, e);
+
         int hashKey = (Integer) k % size;
 
+        //Gets the absolute power of @param k
         if (hashKey < 0) {
             hashKey = -hashKey;
         }
 
-        if ((oldKey = table.get(hashKey).indexOf(pair)) == -1) {
+        int oldKey = table.get(hashKey).indexOf(pair);
+
+        if (oldKey == -1) {
             table.get(hashKey).add(pair);
-            totalCount++;
+            entryCount++;
         } else {
             table.get(hashKey).set(oldKey, pair);
         }
@@ -53,6 +56,7 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
         E tempValue = null;
         int hashKey = (Integer) k % size;
 
+        //Gets the absolute power of @param k
         if (hashKey < 0) {
             hashKey = -hashKey;
         }
@@ -62,7 +66,7 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
             if (k.toString().equals(temp.get(i).getK().toString())) {
                 tempValue = (E) temp.get(i).getValue();
                 table.get(hashKey).remove(i);
-                totalCount--;
+                entryCount--;
             }
         }
 
@@ -88,20 +92,26 @@ public class DictionaryImpl<Key, E> implements Dictionary<Key, E> {
 
     @Override
     public void report() {
+        int min = 1;
+        int max = 0;
+        int sum = 0;
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < table.size(); i++) {
             if (table.get(i).size() > 0) {
-                sb.append("Index ");
-                sb.append(i);
-                sb.append(" has ");
-                sb.append(table.get(i).size());
-                sb.append(" items.\n");
+
+                if (table.get(i).size() < min) {
+                    min = table.get(i).size();
+                }
+                if (table.get(i).size() > max) {
+                    max = table.get(i).size();
+                }
+                sum++;
             }
         }
-        sb.append("There are ");
-        sb.append(totalCount);
-        sb.append(" items in the hash table altogether.");
-        System.out.println("The current load factor is: " + (totalCount / size.doubleValue()));
+        System.out.println("The Minimum chain length is: " + min);
+        System.out.println("The Maximum chain length is: " + max);
+        System.out.println("The Average chain length is: " + (entryCount / sum));
+        System.out.println("The current load factor is: " + (entryCount / size.doubleValue()));
         System.out.println(sb);
     }
 

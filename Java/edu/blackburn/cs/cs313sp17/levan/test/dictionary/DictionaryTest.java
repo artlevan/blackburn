@@ -8,6 +8,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.net.URL;
 
 /**
  *
@@ -44,22 +49,65 @@ public class DictionaryTest {
     public void GenericTest() {
         // Build dictionary that is plenty big enough
         // Get Java generics and diamond notation right
-        DictionaryImpl<Integer, String> D = new DictionaryImpl<>(11);
+        DictionaryImpl<Integer, String> d = new DictionaryImpl<>(11);
 
         // Insert a few things
-        D.insert("Apple".hashCode(), "Apple");
-        D.insert("Banana".hashCode(), "Banana");
-        D.insert("Carrot".hashCode(), "Carrot");
-        D.insert("Date".hashCode(), "Date");
+        d.insert("Apple".hashCode(), "Apple");
+        d.insert("Banana".hashCode(), "Banana");
+        d.insert("Carrot".hashCode(), "Carrot");
+        d.insert("Date".hashCode(), "Date");
 
         // Search for a couple of them and make sure they are there
-        assertEquals("Apple", D.find("Apple".hashCode()));
-        assertEquals("Carrot", D.find("Carrot".hashCode()));
+        assertEquals("Apple", d.find("Apple".hashCode()));
+        assertEquals("Carrot", d.find("Carrot".hashCode()));
 
         // Remove something...
-        D.remove("Carrot".hashCode());
+        d.remove("Carrot".hashCode());
 
         // ...and make sure it's no longer in Dictionary
-        assertEquals(null, D.find("Carrot".hashCode()));
+        assertEquals(null, d.find("Carrot".hashCode()));
+    }
+
+    @Test
+    public void InputTest() throws FileNotFoundException, IOException {
+        URL path = Dictionary.class.getResource("dict-small.txt");
+        FileReader fr = new FileReader(path.getFile());
+        BufferedReader read = new BufferedReader(fr);
+        boolean fileFound = false;
+
+        if (read.readLine() != null) {
+            fileFound = true;
+        }
+        assertEquals(true, fileFound);
+    }
+
+    @Test
+    public void negativeTest() {
+        //Generate Dictionary of size 1
+        DictionaryImpl<Integer, String> d = new DictionaryImpl<>(1);
+        //Insert a String with a negative key
+        d.insert(-4, "Negative");
+        //Search for the negative key
+        assertEquals("Negative", d.find(-4));
+       
+    }
+
+    @Test
+    public void CollisionTest() {
+        //Generate Dictionary of size 1
+        DictionaryImpl<Integer, String> d = new DictionaryImpl<>(1);
+        //Insert two different strings to the same key
+        d.insert("alpha".hashCode(), "alpha");
+        d.insert("alpha".hashCode(), "bravo");
+
+        //Search the first entry then remove it
+        assertEquals("alpha", d.find("alpha".hashCode()));
+        d.remove("alpha".hashCode());
+        //Search the second entry then remove it
+        assertEquals("bravo", d.find("alpha".hashCode()));
+        d.remove("alpha".hashCode());
+        //Assert there's nothing left
+        assertEquals(null, d.find("alpha".hashCode()));
+
     }
 }
