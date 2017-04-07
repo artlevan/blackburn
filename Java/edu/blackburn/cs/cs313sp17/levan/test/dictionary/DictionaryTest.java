@@ -73,12 +73,25 @@ public class DictionaryTest {
         URL path = Dictionary.class.getResource("dict-small.txt");
         FileReader fr = new FileReader(path.getFile());
         BufferedReader read = new BufferedReader(fr);
+        DictionaryImpl<Integer, String> d = new DictionaryImpl<>(11);
+        String hashMe = "";
+        String hashTest = "";
         boolean fileFound = false;
 
         if (read.readLine() != null) {
             fileFound = true;
+            hashTest = read.readLine();
         }
         assertEquals(true, fileFound);
+
+        while (read.readLine() != null) {
+            hashMe = read.readLine();
+
+            if (hashMe != null) {
+                d.insert(hashMe.hashCode(), hashMe);
+            }
+        }
+
     }
 
     @Test
@@ -89,7 +102,7 @@ public class DictionaryTest {
         d.insert(-4, "Negative");
         //Search for the negative key
         assertEquals("Negative", d.find(-4));
-       
+
     }
 
     @Test
