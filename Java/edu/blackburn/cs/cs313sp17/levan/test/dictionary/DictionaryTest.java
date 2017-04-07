@@ -75,15 +75,14 @@ public class DictionaryTest {
         BufferedReader read = new BufferedReader(fr);
         DictionaryImpl<Integer, String> d = new DictionaryImpl<>(11);
         String hashMe = "";
-        String hashTest = "";
         boolean fileFound = false;
-
+        //reads the first entry to see if it is null
         if (read.readLine() != null) {
             fileFound = true;
-            hashTest = read.readLine();
-        }
+       }
+        //Confirms the file was found
         assertEquals(true, fileFound);
-
+        //Inserts the file into the dictionary
         while (read.readLine() != null) {
             hashMe = read.readLine();
 
