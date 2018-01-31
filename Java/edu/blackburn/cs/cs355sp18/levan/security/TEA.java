@@ -21,7 +21,6 @@ public class TEA {
                 System.out.println(buff);
                 key[buff] = 0;
                 buff++;
-
             }
         }
         /*

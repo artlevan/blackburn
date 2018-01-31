@@ -9,7 +9,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 /**
- *
+ * Hello
+ * Hello, World!
+ * alphabet
+ * ALPHABET
  * @author Arthur Levan
  */
 public class Runner {
