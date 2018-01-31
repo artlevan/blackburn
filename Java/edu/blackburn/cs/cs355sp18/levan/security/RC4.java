@@ -15,11 +15,11 @@ public class RC4 {
     private final byte[] T = new byte[256];
     private final int keylen;
 
-    //Intialization
+    //Intialization using KSA
     public RC4(final byte[] key) {
         if (key.length < 1 || key.length > 256) {
             throw new IllegalArgumentException(
-                    "key must be between 1 and 256 bytes");
+                    "Key must be between 1 and 256 bytes");
         } else {
             keylen = key.length;
             for (int i = 0; i < 256; i++) {
@@ -36,7 +36,7 @@ public class RC4 {
             }
         }
     }
-    //Encryption
+    //Encryption using PRGA
     public byte[] encrypt(final byte[] plaintext) {
         final byte[] ciphertext = new byte[plaintext.length];
         int i = 0;
